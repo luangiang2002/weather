@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ .active{
+  @apply bg-blue-400 w-[100px] text-center h-[150px]  rounded-md text-white
+ }
