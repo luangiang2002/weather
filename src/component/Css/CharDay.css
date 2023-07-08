@@ -1,0 +1,9 @@
+/* #chart{
+    @apply w-[400px] h-[500px]
+} */
+.chart{
+    @apply w-[400px] h-[300px] sm:w-[800px] lg:w-[1000px] lg:h-[400px] xl:w-[1300px] 
+}
+#recharts-wrapper{
+    @apply w-[300px] min-[400px]:w-[400px] sm:w-[800px]  h-[300px] lg:w-[1000px] lg:h-[400px] xl:w-[1300px]
+   }
