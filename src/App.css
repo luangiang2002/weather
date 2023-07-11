@@ -2,28 +2,47 @@
   box-sizing: border-box;
 }
 
- .active{
-  @apply bg-blue-400 w-[30%] text-center h-[150px]  rounded-md text-white
- }
- .item{
-  @apply  hover:bg-blue-400 w-[30%] text-center h-[170px]  hover:rounded-md hover:text-white
- }
- 
- .renderday{
- @apply max-[500px]:w-[400px]  max-[400px]:w-[300px] sm:w-[750px] lg:w-[1000px] xl:w-[1380px] 2xl:w-[1200px]
- }
- .itemday{
-  @apply  hover:bg-blue-400 text-center h-[180px] p-[2px] w-[130px] hover:rounded-md hover:text-white lg:mt-[50px] xl:w-[160px] xl:px-[20px]
+.active {
+  @apply bg-blue-400 w-[30%] text-center h-[150px] rounded-md text-white
 }
-.slick-list{
+
+.item {
+  @apply hover:bg-blue-400 w-[30%] text-center h-[170px] hover:rounded-md hover:text-white
+}
+
+.renderday {
+  @apply max-w-full
+}
+
+.itemday {
+  @apply hover:bg-blue-400 text-center h-[180px] p-[2px] w-[130px] hover:rounded-md hover:text-white lg:mt-[50px] xl:w-[160px] xl:px-[20px]
+}
+.recharts-surface{
+  @apply max-[540px]:w-[400px] max-[640px]:w-[600px] max-[400px]:w-[300px] h-[200px]
+ }
+.slick-list {
   overflow: hidden;
 }
-.slick-track{
+
+.slick-track {
   display: flex;
 }
- .slick-active{
+
+.slick-active {
   width: 100% !important;
 }
- .slick-slide{
+
+.slick-slide {
   width: 100% !important;
+}
+
+.modal {
+
+  @apply fixed bg-slate-400 w-[400px] h-[400px] top-2/4 left-2/4 rounded-lg overflow-hidden
+}
+.modalshow{
+  transform: translate(-50%, -50%);
+}
+.hidden{
+  display: none;
 }

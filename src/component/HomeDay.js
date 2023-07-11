@@ -14,7 +14,7 @@ export default function HomeDay() {
     {
       weather.map((weatherDay, index) => {
         return (
-          <div className=' active item' key={weatherDay.date_epoch} onClick={() => handleDay(weatherDay.date_epoch)} >
+          <div className=' active item cursor-pointer' key={weatherDay.date_epoch} onClick={() => handleDay(weatherDay.date_epoch)} >
             <p >{
               index === 0 ? 'Today' : weatherDay.date
             }</p>

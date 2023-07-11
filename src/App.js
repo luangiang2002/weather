@@ -25,7 +25,7 @@ function App() {
                   <HomeSidebar />
                 </div>
                 <div className=''>
-                  <div className='w-full mt-[10px] sm:p-[30px]'>
+                  <div className='w-full mt-[100px] sm:p-[30px]'>
                     <h1>Temperature Chart</h1>
                   </div>
                   <div className='w-full'>

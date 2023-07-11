@@ -1,5 +1,4 @@
 
-import './Css/Chart.css'
 import { useSelector } from "react-redux";
 import {
     AreaChart,
