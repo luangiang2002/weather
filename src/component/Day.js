@@ -12,7 +12,7 @@ export default function Day() {
     useEffect(() => {
         const data = weatherday.filter(weather => weather.date_epoch === Number(param.epoch))
         setWeatherDay(...data)
-    }, [])
+    }, [param.epoch, weatherday])
   const handleBack = () => {
     navigate('/')
   }

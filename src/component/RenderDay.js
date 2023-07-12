@@ -11,7 +11,7 @@ function RenderDay() {
         const data = weatherday.filter(weather => weather.date_epoch === Number(param.epoch))
 
         setWeatherDay(...data)
-    }, [])
+    }, [param.epoch, weatherday])
     const [show, SetShow] = useState(false)
     const [data, SetData] = useState('')
     const handleShow = (data) => {
