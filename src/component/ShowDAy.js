@@ -1,19 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export default function ShowDAy(props) {
-    let show = props.show
-    let data = props.data
-    const [isShow, setShow] = useState(show)
-    const handleClose = () => {
-        setShow(show => !show);
-        console.log(show);
-    }
-    console.log(data);
+ function ShowDAy(props) {
+     let show = props.show
+     let data = props.data
+     let handleShow=props.handleShow
     return (
         <>
             {
-                !!data && isShow === true ?
-                    <div className='w-[100vw] h-[110vh] bg-transparent absolute top-0 left-0' onClick={()=>handleClose(!show)}>
+                !!data && show === true ?
+                    <div className='w-[100vw] h-[110vh] bg-transparent absolute top-0 left-0' onClick={()=>handleShow(show)}>
                         <div className='modal modalshow z-10'>
                             <div className='relative p-[30px]'>
                                 <div className='text-center text-[20px] text-white '>
@@ -32,3 +27,4 @@ export default function ShowDAy(props) {
         </>
     )
 }
+export default ShowDAy

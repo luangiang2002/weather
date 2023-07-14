@@ -10,8 +10,6 @@ import {
 } from "recharts";
 export default function Chart() {
     const weather = useSelector(state => state.weather.weather.forecast.forecastday)
-    // console.log(weather);
-    // console.log(weather[0].hour[0]);
     const data = [
         {
             name: "08:00",
@@ -80,7 +78,7 @@ export default function Chart() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Area type="monotone" dataKey="Temperature" stroke="#8884d8" fill="#8884d8" />
+            <Area type="monotone" dataKey="Temperature" stroke="#00CCFF" fill="#00CCFF" />
         </AreaChart>
     );
 }

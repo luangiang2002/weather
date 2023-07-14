@@ -20,22 +20,6 @@
 .recharts-surface{
   @apply max-[540px]:w-[400px] max-[640px]:w-[600px] max-[400px]:w-[300px] h-[200px]
  }
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-}
-
-.slick-active {
-  width: 100% !important;
-}
-
-.slick-slide {
-  width: 100% !important;
-}
-
 .modal {
 
   @apply fixed bg-slate-400 w-[400px] h-[400px] top-2/4 left-2/4 rounded-lg overflow-hidden
@@ -45,4 +29,23 @@
 }
 .hidden{
   display: none;
+}
+.scrollDay::-webkit-scrollbar{
+  width: 0;
+  
+}
+.scrollDay{
+  overflow-x: scroll;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+@media (max-width:640px){
+  .city{
+    top: 80px;
+    left: 40%;
+  }
+  .time{
+    margin-top: 100px;
+  }
 }

@@ -1,16 +1,29 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux'
 
 export default function HomeSidebar() {
     const weather = useSelector(state => state.weather.weather)
+    let time = new Date().toLocaleDateString();
+    const [currentTime, SetCurrentTime] = useState(time)
+    useEffect(() => {
+        const updateTime = () => {
+            let time = new Date().toLocaleTimeString();
+            SetCurrentTime(time)
+        }
+        setInterval(updateTime, 1000)
+    })
+    let date = new Date().toDateString();
     return (
         <>
+
             <div className='flex mb-[30px] '>
                 <p className='w-[30%]'>Your city :</p>
                 <input type="text" className='border outline-none rounded w-[70%]' />
             </div>
-            <div className='text-center'>
-                <p className='xl:text-[30px] sm:my-[80px]'>{weather.current.last_updated}</p>
+            <div className='text-center time'>
+                <p className='xl:text-[30px] sm:my-[80px]'>{date} - {currentTime}</p>
                 <div className='flex text-[39px] mt-[20px] justify-center'>
                     <img src={weather.current.condition.icon} alt="" />
                     <p className=''>{weather.current.temp_f}<sup>°F</sup></p>
