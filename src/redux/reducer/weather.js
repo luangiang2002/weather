@@ -4,7 +4,7 @@ const initialState = {
   weather: null,
 }
 
-const reducer = (state = initialState, action) => {
+const WeatherReducer = (state = initialState, action) => {
   switch (action.type) {
     case type.FETCH_DATA_SUCCESS:
       return {
@@ -15,4 +15,4 @@ const reducer = (state = initialState, action) => {
       return state
   }
 }
-export default reducer
+export default WeatherReducer

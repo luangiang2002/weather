@@ -40,12 +40,32 @@
   cursor: pointer;
   transition: all 0.3s linear;
 }
+.modal_ovelay{
+  background-color: rgb(147, 137, 137,0.3);
+  width: 100vw;
+  height: 125vh;
+  overflow: hidden;
+  position: fixed;
+}
+.error{
+  width: 500px;
+  background-color: white;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 5px;
+}
 @media (max-width:640px){
   .city{
-    top: 80px;
-    left: 40%;
+    top: 100px;
+    left: 10%;
+    font-size: 20px;
   }
   .time{
     margin-top: 100px;
+  }
+  .error{
+    width: 300px;
   }
 }

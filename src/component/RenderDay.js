@@ -13,12 +13,7 @@ function RenderDay(props,rootClass = "") {
     const [draDown, setDraDown] = useState(0)
     const [draMovie, setDraMovie] = useState(0)
     const [isDrag, setIsDrag] = useState(false)
-    useEffect(() => {
-        if (isDrag) {
-            if (draMovie < draDown) scrollTo(500);
-            if (draMovie > draDown) scrollTo(-500)
-        }
-    }, [draDown, draMovie, isDrag, scrollTo])
+  
     const onDragStart = (e) => {
         setIsDrag(true)
         setDraDown(e.screenX)
@@ -29,7 +24,12 @@ function RenderDay(props,rootClass = "") {
     const onDragEnter = (e) => {
         setDraMovie(e.screenX)
     }
-
+    useEffect(() => {
+        if (isDrag) {
+            if (draMovie < draDown) scrollTo(500);
+            if (draMovie > draDown) scrollTo(-500)
+        }
+    }, [draDown, draMovie, isDrag, scrollTo])
     return (
         hour !== undefined && hour ?
             <div className="renderday" >

@@ -71,8 +71,8 @@ export default function ChartDay({ weatherDay }) {
                 label: 'uv',
                 data: uv,
                 fill: true,
-                borderColor: 'rgb(144, 131, 207)',
-                backgroundColor: '#ff9500',
+                borderColor: '#FF9900',
+                backgroundColor: '#FFCC66',
                 hidden: true,
             },
             {
@@ -80,14 +80,14 @@ export default function ChartDay({ weatherDay }) {
                 data: temp,
                 fill: true,
                 borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: '#00CCFF',
+                backgroundColor: '#66CCFF',
             },
             {
                 label: 'Hudimity',
                 data: hudimity,
                 fill: true,
-                borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: '#ff9500',
+                borderColor: '#FF9900',
+                backgroundColor: '#FFCC66',
                 hidden: true
             },
         ],

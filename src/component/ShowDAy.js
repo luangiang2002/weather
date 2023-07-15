@@ -8,7 +8,7 @@ import React from 'react'
         <>
             {
                 !!data && show === true ?
-                    <div className='w-[100vw] h-[110vh] bg-transparent absolute top-0 left-0' onClick={()=>handleShow(show)}>
+                    <div className='w-[100vw] h-[110vh] bg-transparent absolute top-0 left-0 modal_ovelay' onClick={()=>handleShow(show)}>
                         <div className='modal modalshow z-10'>
                             <div className='relative p-[30px]'>
                                 <div className='text-center text-[20px] text-white '>
