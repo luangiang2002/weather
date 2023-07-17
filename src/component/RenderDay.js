@@ -11,7 +11,7 @@ function RenderDay(props,rootClass = "") {
     }
     const { scrollContainerRef, handleScroll, scrollTo } = useSmoothHorizontalScroll();
     const [draDown, setDraDown] = useState(0)
-    const [draMovie, setDraMovie] = useState(0)
+    const [draWeather, setDraWeather] = useState(0)
     const [isDrag, setIsDrag] = useState(false)
   
     const onDragStart = (e) => {
@@ -22,14 +22,14 @@ function RenderDay(props,rootClass = "") {
         setIsDrag(false)
     }
     const onDragEnter = (e) => {
-        setDraMovie(e.screenX)
+        setDraWeather(e.screenX)
     }
     useEffect(() => {
         if (isDrag) {
-            if (draMovie < draDown) scrollTo(500);
-            if (draMovie > draDown) scrollTo(-500)
+            if (draWeather < draDown) scrollTo(500);
+            if (draWeather > draDown) scrollTo(-500)
         }
-    }, [draDown, draMovie, isDrag, scrollTo])
+    }, [draDown, draWeather, isDrag, scrollTo])
     return (
         hour !== undefined && hour ?
             <div className="renderday" >

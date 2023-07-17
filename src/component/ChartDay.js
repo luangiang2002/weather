@@ -71,8 +71,8 @@ export default function ChartDay({ weatherDay }) {
                 label: 'uv',
                 data: uv,
                 fill: true,
-                borderColor: '#FF9900',
-                backgroundColor: '#FFCC66',
+                borderColor: '#9966CC',
+                backgroundColor: '#CC66FF',
                 hidden: true,
             },
             {

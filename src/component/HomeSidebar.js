@@ -7,12 +7,12 @@ import { fetchWeather } from '../redux/action/FetchApi';
 
 export default function HomeSidebar() {
     const weather = useSelector(state => state.weather.weather)
-    const inputRef=useRef(null)
+    const inputRef = useRef(null)
     let time = new Date().toLocaleDateString();
     const [currentTime, SetCurrentTime] = useState(time)
-    const dispatch=useDispatch()
-    const handleInput=(e)=>{
-        if (e.key === 'Enter'){
+    const dispatch = useDispatch()
+    const handleInput = (e) => {
+        if (e.key === 'Enter') {
             dispatch(fetchWeather(e.target.value))
 
         }
@@ -20,21 +20,22 @@ export default function HomeSidebar() {
 
 
     useEffect(() => {
-        inputRef.current.addEventListener('keypress',handleInput)
+        inputRef.current.addEventListener('keypress', handleInput)
         const updateTime = () => {
             let time = new Date().toLocaleTimeString();
             SetCurrentTime(time)
         }
-        setInterval(updateTime, 1000)
-    },[])
+        let time = setInterval(updateTime, 1000)
+        return () => clearInterval(time)
+    }, [])
     let date = new Date().toDateString();
-    
+
     return (
         <>
 
             <div className='flex mb-[30px] w-full'>
                 <p className='w-full  text-[25px]'>Your city :</p>
-                <input ref={inputRef} type="text" className='border border-black  outline-none rounded w-full px-[10px]  h-[40px] '  />
+                <input ref={inputRef} type="text" className='border border-black  outline-none rounded w-full px-[10px]  h-[40px] ' />
             </div>
             <div className='text-center time'>
                 <p className='xl:text-[30px] sm:my-[80px]'>{date} - {currentTime}</p>
